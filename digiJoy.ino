@@ -43,7 +43,7 @@ void loop() {
   DigiJoystick.setX(map_reading(analogRead(XPIN), x_centre, 0, 128, 255));
   DigiJoystick.setY(map_reading(analogRead(YPIN), y_centre, 255, 128, 0));
   DigiJoystick.setButtons(
-    (char)((digitalRead(1) ? 0x00 : 0x01) | (digitalRead(0) ? 0x02 : 0x00)),
+    (char)((digitalRead(1) ? 0x01 : 0x00) | (digitalRead(0) ? 0x00 : 0x02)),
     0x00
 );
 
